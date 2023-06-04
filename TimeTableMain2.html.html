@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet"type="text/css" href="TimeTableMain2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+    <style>
+    #download{
+          
+            background-color: rgb(255, 255, 255);
+            color: black;
+            padding: 20px;
+            margin: 15px;
+           
+        }
+    </style>
+</head>
+<body id="content">
+    <table >
+        <tbody  id="my_table"></tbody>
+        <input type="button" id="download" value="Download PDF" />
+    </table>
+<!-- <div id="add_to_me">
+    <h1>TESTING</h1>
+</div> -->
+<script type="application/javascript">
+
+window.onload = function () {
+    document.getElementById("download")
+        .addEventListener("click", () => {
+            const invoice = this.document.getElementById("content");
+            console.log(content);
+            console.log(window);
+            var opt = {
+                margin: 1,
+                filename: 'Time-Table.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'landscape' }
+            };
+            html2pdf().from(invoice).set(opt).save();
+        })
+}
+
+
+    const days = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+    const subjects = [
+        [
+            'CSE-4:CSOA',
+            'CSE-4:RDBMS',
+            'CSE-4:DSUC',
+            'CSE-4:OOC',
+            'CSE-4:CNS',
+            'CSE-4:IWT',
+            'CSE-4:RDBMS LAB Lab-1',
+            'CSE-4:IWT LAB Lab-1',
+        ], [
+            'CSE-6:OST',
+            'CSE-6:.NET',
+            'CSE-6:MM',
+            'CSE-6:DMW',
+            'CSE-6:MP',
+            'CSE-6:.NET',
+            'CSE-6:ES',
+            'CSE-6:MP LAB Lab-1',
+        ],
+    ];
+
+    let final = [];
+
+    for (const day of days) {
+        let sub = [];
+        for (const subject of subjects) {
+            let row = [];
+            for (const singleSubject of shuffle(subject)) {
+                row.push(singleSubject);
+            }
+            sub.push(row);
+        }
+
+        final[day] = sub;
+    }
+
+    let html = '';
+
+    for (const [day, value] of Object.entries(final)) {
+        html += '<td ><h2>'+day +'</h2 ></td>';
+
+        for (const branch of value) {
+
+            html += '<tr ><td ><strong>' + branch[0].split(':')[0] + ' : </strong></td>';
+            for (const sub of branch) {
+                html += '  <td>' + sub.split(':')[1] + '</td>';
+            }
+
+            html += '</tr>';
+
+        }
+
+        html += '<br>';
+    }
+
+    // document.getElementById("add_to_me").innerHTML += html;
+    document.getElementById("my_table").innerHTML += html;
+
+    console.log(final);
+
+    function shuffle(array) {
+        let currentIndex = array.length, randomIndex;
+
+        // While there remain elements to shuffle.
+        while (currentIndex !== 0) {
+
+            // Pick a remaining element.
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+
+            // And swap it with the current element.
+            [array[currentIndex], array[randomIndex]] = [
+                array[randomIndex], array[currentIndex]];
+        }
+
+        return array;
+    }
+
+</script>
+</body>
+</html>
+

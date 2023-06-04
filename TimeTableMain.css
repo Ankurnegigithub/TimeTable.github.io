@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&family=Roboto:ital,wght@1,100&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+  font-family:'Times New Roman', Times, serif
+}
+input[type="button"]{
+  margin-bottom: 20px;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: #362c3f;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(62, 97, 255, 0.15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(4, 36, 124, 0.15) 0 16px 32px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+input[type="button"]:hover {
+  box-shadow: rgba(88, 180, 192, 0.35) 0 -25px 18px -14px inset,rgba(0, 224, 240, 0.25) 0 1px 2px,rgba(13, 129, 129, 0.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+#my_table{
+  padding-top: 20px;
+    display: block;
+    align-items:center;
+    border: 2;
+    margin-top: 0px;
+    border: 2px solid black;
+    overflow: auto;
+        white-space: nowrap;
+    overflow-y: auto;
+}
+
+input{
+  text-align: center;
+  justify-items: center;
+ 
+  
+}
+
+.text1 input[type=text]{
+  text-align: center;
+     background-color:antiquewhite;
+     height: 30px;
+     font-size:x-large;
+     font-family: 'Times New Roman', Times, serif;
+      font-weight: bolder;
+      text-decoration-color: black;
+      color: black;
+        width: 100%;
+        box-sizing: border-box ;
+        
+
+
+}
+table input[type="time"]{
+    width:100px;
+}
+
+
+table input,select{
+    width: 100%;
+}
+
+.SubjectsNFaculty{
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  padding-top: 10px;
+ height: 20px;
+ text-align: center;
+ font-weight: 200;
+ font-size: medium;
+ color: aqua;
+}
+.Sign{
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}

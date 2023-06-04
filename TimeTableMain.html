@@ -1,0 +1,142 @@
+<HTML>
+    <HEAD>
+        <title>Time</title>
+        <link rel="stylesheet"type="text/css" href="TimeTableMain.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+    <script src="TimeTableMain.js"></script>
+    </HEAD>
+    <BODY bgcolor="grey" class="text-sky-500 ">
+      <div class="MainContainer" id="content">
+         <input type="button" id="download" value="Download PDF" />
+    <input type="button" value="Add row" onClick="addRow()" />
+    <input type="button" value="Add column" onClick="addColumn()" />
+    <input type="button" value="Delete selected rows" onClick="deleteSelectedRows()" />
+    <input type="button" value="Delete column" onClick="deleteColumn()" />
+    <input type="button" value="Delete all rows" onClick="deleteAllRows()" />
+    <br><hr size="2" color="black">
+    <br>
+    <br>
+    <h1 style="margin: 20px ; text-align: center; ">          Now You Can Create Your Time Table ! &#128522; </h1>
+    <table id="my_table" cellpadding="1" cellspacing="1">
+      <div class="text1 " style="padding: 20px;">
+        <input type="text" id="College" placeholder="Enter Your College Name"><br>
+        <input type="text" id="Branch" placeholder="Enter Your Branch Name"><br>
+        <input type="text" id="Session" placeholder="Enter Your Current Session">
+      </div>
+     
+    <thead><tr>
+        <th></th>
+        <th>TIME TABLE</th>
+        <th>
+         BRANCH  
+        </th>
+        <th>
+          <input type="time"/><input type="time"  value="Feature" />
+
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th >
+    
+        </th> 
+       
+    </tr>
+    
+    </tbody>
+</table>
+
+<div class="SubjectsNFaculty">
+  <table style="margin-top: 20px; font-weight: bold; font-size: larger;" id="Subject">
+   <tr>
+       <td style="margin-top: 20px;">Faculty Members</td>
+           <td>Lecture</td>
+           <td>Practical</td>
+       </tr>
+   </tr>
+<tr>
+   <div style=" font-size: x-large;">
+<td><input type="text"></td>
+   <td><input type="text"></td>
+   <td><input type="text"></td>
+</tr>
+<tr>
+   <td><input type="text"></td>
+   <td><input type="text"></td>
+   <td><input type="text"></td>
+  
+</tr>
+<tr>
+   <td><input type="text"></td>
+<td><input type="text"></td>
+<td><input type="text"></td>
+</tr>
+<tr>
+   <td><input type="text"></td>
+   <td><input type="text"></td>
+   <td><input type="text"></td>
+  
+</tr>
+<tr>
+   <td><input type="text"></td>
+<td><input type="text"></td>
+<td><input type="text"></td>
+</tr>
+</div>
+  </table>
+
+  <div class="Table2">
+  <table style="margin-top: 20px; text-align: center; font-size: larger; font-style:initial; text-shadow: 2px; text-decoration: aqua; font-weight: bold;">
+   <tr>
+        <td>Faculty Members</td>
+           <td>Lecture</td>
+           <td>Practical</td>
+       </tr>
+   </tr>
+<tr>
+
+
+<td><input type="text"></td>
+   <td><input type="text"></td>
+   <td><input type="text"></td>
+</tr>
+<tr>
+   <td><input type="text"></td>
+   <td><input type="text"></td>
+   <td><input type="text"></td>
+  
+</tr>
+<tr>
+   <td><input type="text"></td>
+<td><input type="text"></td>
+<td><input type="text"></td>
+</tr>
+<tr>
+   <td><input type="text"></td>
+   <td><input type="text"></td>
+   <td><input type="text"></td>
+  
+</tr>
+<tr>
+   <td><input type="text"></td>
+<td><input type="text"></td>
+<td><input type="text"></td>
+</tr>
+
+
+  </table>
+</div>
+</div>
+
+<div class="Sign" id="editor">
+
+  <h2>HOD </h2>    <h2>PRINCIPAL</h2>
+</div>
+
+
+</div>
+
+
+    </BODY>
+    </HTML>
