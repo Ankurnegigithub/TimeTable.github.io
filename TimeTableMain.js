@@ -272,7 +272,7 @@ function addRow() {
        function deleteColumn() {    
         var allRows = document.getElementById('my_table').rows;
         for (var i=0; i< allRows.length; i++) {
-         if (allRows[i].cells.length > 3) {
+         if (allRows[i].cells.length > 4) {
           allRows[i].deleteCell(-1);
            //delete the cell
          } else {
